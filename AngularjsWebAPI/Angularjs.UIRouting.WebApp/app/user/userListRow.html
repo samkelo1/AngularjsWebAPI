@@ -1,0 +1,17 @@
+﻿<div class="row">
+    <div class="col-lg-3">
+        <img ng-src="{{User.Image ? User.Image : 'Userimages/default-image.png'}}"
+             class="img-circle"
+             style="max-width:50px"
+             alt='User image' />
+    </div>
+    <div class="col-lg-9">
+        <div style="font-weight:bold;">
+            <a ng-click="UserDetail(User.UserId)" style="cursor:pointer">{{User.FullName}}</a>
+            <span class="pull-right" title="Delete User">
+                <i ng-click="deleteUser($event, User.UserId)" class="glyphicon glyphicon-trash"></i>
+            </span>
+        </div>
+        <div>{{User.Address}} {{User.Country}} {{User.ZipCode}}</div>
+    </div>
+</div>
